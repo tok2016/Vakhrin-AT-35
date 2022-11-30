@@ -217,11 +217,12 @@ class Report:
                               self.years_data['Доля вакансий по городам (в порядке убывания)'].values()))}
 
 
-csv_file = InputConnect(input_sentences)
-if os.path.getsize(csv_file.name) == 0:
-    print('Пустой файл')
-else:
-    data = DataSet(csv_file.name, [])
-    info = data.read_file()
-    data.vacancies_objects = data.get_reformed_file(info[1], info[0])
-    csv_file.print_vacancies_info(data.vacancies_objects, 'report.pdf')
+def get_statistics():
+    csv_file = InputConnect(input_sentences)
+    if os.path.getsize(csv_file.name) == 0:
+        print('Пустой файл')
+    else:
+        data = DataSet(csv_file.name, [])
+        info = data.read_file()
+        data.vacancies_objects = data.get_reformed_file(info[1], info[0])
+        csv_file.print_vacancies_info(data.vacancies_objects, 'report.pdf')
