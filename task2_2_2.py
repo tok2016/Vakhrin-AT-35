@@ -9,3 +9,4 @@ if request == 'Вакансии':
     get_vacancies_table()
 elif request == 'Статистика':
     get_statistics()
+
