@@ -3,6 +3,8 @@ from task2_1_3 import get_statistics
 
 request = input()
 
+#изменение в develop
+
 if request == 'Вакансии':
     get_vacancies_table()
 elif request == 'Статистика':
